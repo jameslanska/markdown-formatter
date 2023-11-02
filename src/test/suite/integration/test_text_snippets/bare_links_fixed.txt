@@ -1,0 +1,7 @@
+# Bare Links
+
+For more info, visit <https://www.example.com/> or email <user@example.com>.
+
+No additional angle brackets are added <https://www.example.com/>
+
+Turn off wrapping by placing the email in backticks `https://www.example.com/`

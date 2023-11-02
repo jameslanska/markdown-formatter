@@ -1,0 +1,11 @@
+# Bold Styling
+
+**Demo**
+
+__Demo__
+
+__Sequence of words__
+
+It**al**ics
+
+it__al__ics (this doesn't do anything, it should just render as underscores)

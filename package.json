@@ -1,0 +1,137 @@
+{
+	"name": "markdown-formatter",
+	"displayName": "Markdown Formatter",
+	"description": "Format markdown tables, ordered lists, whitespace, etc. according to the Commonmark and Github Flavored Markdown (GFM) specifications",
+	"keywords": [
+		"formatter",
+		"markdown",
+		"other",
+		"tables",
+		"GFM",
+		"Commonmark",
+		"markdown tables"
+	],
+	"author": {
+		"name": "James Lanska",
+		"email": "65431054+jameslanska@users.noreply.github.com"
+	},
+	"publisher": "james-lanska",
+	"publisherDisplayName": "James M Lanska",
+	"license": "mit",
+	"icon": "icon.png",
+	"version": "0.2.0",
+	"engines": {
+		"vscode": "^1.73.0"
+	},
+	"categories": [
+		"Other",
+		"Formatters"
+	],
+	"homepage": "https://github.com/jameslanska/markdown-formatter/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jameslanska/markdown-formatter/"
+	},
+	"bugs": {
+		"url": "https://github.com/jameslanska/markdown-formatter/issues"
+	},
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "markdown-formatter",
+			"type": "object",
+			"properties": {
+				"markdown-formatter.ordered_lists.right_align": {
+					"description": "",
+					"type": "boolean",
+					"default": false
+				},
+				"markdown-formatter.markdownlint_rules.MD004.enabled": {
+					"description": "Enforce dash style for unordered lists",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-formatter.markdownlint_rules.MD007.indent": {
+					"description": "Number of spaces in a unordered list item indent",
+					"type": "integer",
+					"enum": [
+						2,
+						4
+					],
+					"default": 2
+				},
+				"markdown-formatter.markdownlint_rules.MD010.code_blocks": {
+					"description": "Remove hard tabs from code blocks",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-formatter.markdownlint_rules.MD010.ignore_code_languages": {
+					"description": "Fenced code languages to ignore (if MD010.code_blocks is not set to false)",
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"go",
+						"golang"
+					]
+				},
+				"markdown-formatter.markdownlint_rules.MD012.enabled": {
+					"description": "Limit consecutive blank lines",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-formatter.markdownlint_rules.MD027.enabled": {
+					"description": "Remove unnecessary spaces after blockquote symbol",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-formatter.markdownlint_rules.MD030.enabled": {
+					"description": "Fix spacing after list items and before list content",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-formatter.markdownlint_rules.MD049.enabled": {
+					"description": "Enforce asterisk style for italics",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-formatter.markdownlint_rules.MD050.enabled": {
+					"description": "Enforce asterisk style for bold",
+					"type": "boolean",
+					"default": true
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run test-compile",
+		"lint": "eslint src --ext ts",
+		"compile": "tsc -p ./",
+		"test-compile": "npm run compile ; npm run copy-test-text",
+		"copy-test-text": "cp -R ./src/test/suite/integration/test_text_snippets ./out/test/suite/integration/test_text_snippets",
+		"test": "vscode-test"
+	},
+	"dependencies": {
+		"@jameslanska/markdown-table-formatter": "^0.3.0",
+		"markdownlint": "^0.31"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.0",
+		"@types/node": "^20.5.0",
+		"@types/vscode": "^1.73",
+		"@typescript-eslint/eslint-plugin": "^6",
+		"@typescript-eslint/parser": "^6",
+		"@vscode/test-electron": "^2.3",
+		"@vscode/test-cli": "*",
+		"eslint": "^8.45.0",
+		"eslint-plugin-tsdoc": "^0.2.17",
+		"glob": "^10",
+		"mocha": "^10.2",
+		"source-map-support": "^0.5.21",
+		"typescript": "^5"
+	}
+}

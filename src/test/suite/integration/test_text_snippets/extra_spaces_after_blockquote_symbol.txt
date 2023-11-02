@@ -1,0 +1,12 @@
+>   demo
+>   demo 2
+
+>  $$
+>  a + b
+>  $$
+
+> ```typescript
+> function demo() {
+>     console.log("Demo");
+> }
+> ```

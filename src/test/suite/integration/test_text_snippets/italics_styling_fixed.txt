@@ -1,0 +1,11 @@
+# Italics Styling
+
+*Demo*
+
+*Demo*
+
+*Sequence of words*
+
+It*al*ics
+
+it_al_ics

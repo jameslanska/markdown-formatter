@@ -1,0 +1,21 @@
+# Spacing Around Code Blocks
+
+Text
+```rust
+fn main() { ... }
+```
+```rust
+fn main() { ... }
+```
+Text
+
+1. ```rust
+   fn main() { ... }
+   ```
+2. text
+
+
+- ```rust
+  fn main() { ... }
+  ```
+- text

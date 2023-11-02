@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: "Install dependencies"
+        run: |
+          npm install @vscode/vsce
+          npm install @vscode/test-electron
+          npm install @vscode/test-cli
+
+      - name: "Compile"
+        run: npm run test-compile
+      
+      - name: "Test"
+        run: | 
+          npm run test
+
