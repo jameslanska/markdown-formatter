@@ -19,13 +19,15 @@ Markdown Formatter is fully compliant with
 
 ## Getting Started
 
-Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=james-lanska.markdown-formatter) or search `james-lanska.markdown-formatter` in the Extensions tab of VS Code.
+This repository will be posted to the VS Code Marketplace shortly once a name conflict has been resolved.
+
+Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=james-lanska.markdown-formatter) or search `james-lanska.markdownformatter` in the Extensions tab of VS Code.
 
 Set this extension as the formatter for Markdown documents.
 
 ```typescript
 "[markdown]": {
-    "editor.defaultFormatter": "james-lanska.markdown-formatter",
+    "editor.defaultFormatter": "james-lanska.markdownformatter",
 }
 ```
 

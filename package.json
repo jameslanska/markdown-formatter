@@ -1,6 +1,6 @@
 {
-	"name": "markdown-formatter",
-	"displayName": "Markdown Formatter",
+	"name": "markdownformatter",
+	"displayName": "Markdown Doctor",
 	"description": "Format markdown tables, ordered lists, whitespace, etc. according to the Commonmark and Github Flavored Markdown (GFM) specifications",
 	"keywords": [
 		"formatter",
