@@ -6,8 +6,8 @@ A Visual Studio Code extension that includes
 
 - comprehensive whitespace formatting,
 - table formatting,
-- ordered list renumbering,
-- autofixing of several common errors,
+- ordered list renumbering, and
+- autofixing of several common errors.
 
 Markdown Formatter is fully compliant with
 
@@ -16,8 +16,6 @@ Markdown Formatter is fully compliant with
 - [Unicode 15.1.0](https://unicode.org/versions/Unicode15.1.0/)
 - [Unicode Standard Annex \#11](https://www.unicode.org/reports/tr11/tr11-11.html)
 - [Unicode Standard Annex \#29](https://unicode.org/reports/tr29/)
-
-This project will be released on the VS Code Marketplace shortly.
 
 ## Getting Started
 
@@ -31,7 +29,7 @@ Set this extension as the formatter for Markdown documents.
 }
 ```
 
-Turn on "format on save"
+Turn on "format on save".
 
 ```typescript
 "editor.formatOnSave": true,
@@ -72,9 +70,9 @@ The table formatter is fully compliant with *Unicode 15.1.0*.  The table formatt
 
 Actual alignment of characters in your text editor will depend on the editor and the fonts used.  If you are unsure whether the implementation is correct, open the file in vim.
 
-Since *correct* table formatting is a computationally expensive operation, this code is written in Rust and compiled to WebAssembly.  For further details, see [markdown-table-formatter](https://github.com/jameslanska/markdown-table-formatter)
+Since *correct* table formatting is a computationally expensive operation, this code is written in Rust and compiled to WebAssembly.  For further details, see [markdown-table-formatter](https://github.com/jameslanska/markdown-table-formatter).
 
-VS Code allows wrapping of text onto the next line to improve readability of text.  This can make it difficult to read Markdown tables that have lots of text in each element. Toggle word wrap with <kbd>option</kbd> <kbd>z</kbd> on macOS or typing "word wrap" into the command palette.
+VS Code allows wrapping of text onto the next line to improve readability of text.  This can make it difficult to read Markdown tables that have lots of text in each element. Toggle word wrap with <kbd>option</kbd> <kbd>z</kbd> on macOS or type "word wrap" into the command palette.
 
 ## Ordered List Formatting
 
