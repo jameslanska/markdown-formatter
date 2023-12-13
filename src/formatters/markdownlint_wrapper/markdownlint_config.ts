@@ -1,3 +1,4 @@
+import { Configuration } from "markdownlint";
 import { get_markdownlint_settings } from "../../utilities/utilities";
 
 /**
@@ -182,7 +183,7 @@ function get_user_markdownlint_config(
 /**
  * Get the configuration object to pass to `markdownlint`.  Merges the default config and the user config defined in VS Code settings.
  */
-export function get_markdownlint_config(tab_size: number): object {
+export function get_markdownlint_config(tab_size: number): Configuration {
     // Merge default config and the user config
     const configuration = Object.fromEntries([
         ...Object.entries(MARKDOWNLINT_DEFAULTS),
