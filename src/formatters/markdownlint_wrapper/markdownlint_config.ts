@@ -5,6 +5,8 @@ import { get_markdownlint_settings } from "../../utilities/utilities";
  * Default rule settings as set by markdownlint that aren't changed by Markdown Formatter
  *
  * This object is not strictly necessary, but improves readability and makes the code less implicit and "magic".
+ *
+ * See https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
  */
 const MARKDOWNLINT_DEFAULTS = {
     /** Inconsistent indentation for list items at the same level */
@@ -48,11 +50,14 @@ const MARKDOWNLINT_DEFAULTS = {
 
     /** Files should end with a single newline character */
     MD047: true,
+
+    /** Tables should be surrounded by blank lines */
+    MD058: true,
 };
 
 /**
  * Default configurations that differ from those given by markdownlint itself
- * 
+ *
  * @see {@link https://github.com/jameslanska/markdown-formatter/blob/main/docs/differences_between_markdown_lint_defaults.md | Differences Between Markdownlint Defaults}
  */
 const MARKDOWN_FORMATTER_DEFAULTS = {

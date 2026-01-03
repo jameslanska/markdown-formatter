@@ -87,6 +87,13 @@ suite("markdownlint wrapper", function () {
         test("MD050 Fix bold styling", function () {
             test_formatter("bold_styling.txt", "bold_styling_fixed.txt");
         });
+
+        test("MD058 Tables should be surrounded by blank lines", function () {
+            test_formatter(
+                "table_without_surrounding_newlines.txt",
+                "table_without_surrounding_newlines_fixed.txt",
+            );
+        });
     });
 
     suite("disable MD004", function () {
