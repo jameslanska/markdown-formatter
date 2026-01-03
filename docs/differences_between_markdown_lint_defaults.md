@@ -104,3 +104,4 @@ The following markdown rules are turned on and do not have corresponding configu
 - MD037 (Emphasis is only parsed as such when the asterisks/underscores aren't surrounded by spaces.)
 - MD039 (spaces at the bounds of link text are not rendered and decrease readability of source)
 - MD047 (Moving the `EOF` to its own line simplifies the git diff.)
+- MD058 (Aesthetics and simplicity of configuration)
