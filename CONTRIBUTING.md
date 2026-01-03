@@ -60,15 +60,20 @@ A pull request that only serves to add a new configuration choice will almost ce
 
 Run `deploy.sh` from the project root to set up the development environment and install the package to VS Code.  Then open a VS Code workspace at the extension root.
 
-The integration tests run in an instance of VSCode without any extensions.
-
-Open the "Run and Debug" sidebar (<kbd>SHIFT</kbd> <kbd>COMMAND</kbd> <kbd>D</kbd> on macOS)
-
-From the dropdown box to the right of the green triangle button, select "Run Extension Tests".
-
-If you don't have the most recent version of VS Code downloaded and installed, the test system may download a new version exclusively for the testing.
+The integration tests run in an instance of VSCode without any extensions.  If you don't have the most recent version of VS Code downloaded and installed, the test system may download a new version exclusively for the testing.
 
 A new VSCode window should open and then close a few seconds later.  If the debug console doesn't open automatically open after the testing window closes, open manually.  Check that all tests passed.
+
+### VSCode Debugger
+
+1. Open the "Run and Debug" sidebar (<kbd>SHIFT</kbd> <kbd>COMMAND</kbd> <kbd>D</kbd> on macOS)
+2. From the dropdown box to the right of the green triangle button, select "Run Extension Tests".
+
+### CLI
+
+```shell
+npm run test
+```
 
 ## Coding conventions
 
