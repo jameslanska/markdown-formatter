@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [0.3.0] - Unreleased
 
 - Add MD058 "Tables should be surrounded by blank lines" support
+- Update to ES2024
 
 ## [0.2.0] - 2023-11-02
 
