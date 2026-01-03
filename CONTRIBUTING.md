@@ -62,7 +62,7 @@ Run `deploy.sh` from the project root to set up the development environment and 
 
 The integration tests run in an instance of VSCode without any extensions.  If you don't have the most recent version of VS Code downloaded and installed, the test system may download a new version exclusively for the testing.
 
-A new VSCode window should open and then close a few seconds later.  If the debug console doesn't open automatically open after the testing window closes, open manually.  Check that all tests passed.
+A new VSCode window should open for the duration of the tests.  If the debug console doesn't open automatically after the testing window closes, open it manually.  Check that all tests passed.
 
 ### VSCode Debugger
 
@@ -72,6 +72,7 @@ A new VSCode window should open and then close a few seconds later.  If the debu
 ### CLI
 
 ```shell
+npm run test-compile
 npm run test
 ```
 
