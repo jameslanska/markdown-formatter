@@ -1,5 +1,5 @@
 import * as path from "path";
-import * as Mocha from "mocha";
+import Mocha from "mocha";
 
 /*
  * Version 10 (the most current as of April 11, 2023) of glob moves has changed the import style used, so

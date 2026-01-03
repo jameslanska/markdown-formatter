@@ -1,5 +1,3 @@
-"use strict";
-
 import * as vscode from "vscode";
 import { format_document } from "./formatters/main_formatter";
 

@@ -2,10 +2,15 @@
  * Adapted from https://github.com/DavidAnson/markdownlint/blob/main/helpers/helpers.js
  */
 
-"use strict";
-
 import * as vscode from "vscode";
-import markdownlint = require("markdownlint");
+import {
+    FixInfo,
+    LintError,
+    LintResults,
+    Options,
+    RuleOnErrorFixInfo,
+} from "markdownlint";
+import { lint } from "markdownlint/sync";
 import { get_markdownlint_config } from "./markdownlint_config";
 
 /**
@@ -16,7 +21,7 @@ import { get_markdownlint_config } from "./markdownlint_config";
  * @returns  Normalized `RuleOnErrorFixInfo` instance
  */
 function normalize_fix_info(
-    fix_info: markdownlint.FixInfo,
+    fix_info: FixInfo,
     line_number?: number,
 ): Complete_Fix_Info {
     return {
@@ -49,10 +54,7 @@ type Complete_Fix_Info = {
  * @param errors - RuleOnErrorInfo instances
  * @returns - Corrected content
  */
-export function apply_fixes(
-    input: string,
-    errors: markdownlint.LintError[],
-): string {
+export function apply_fixes(input: string, errors: LintError[]): string {
     const line_ending = "\n";
     const lines: string[] = input.split(line_ending);
     const fixed_lines: (string | null)[] = lines;
@@ -101,7 +103,7 @@ export function apply_fixes(
     }
 
     // Collapse insert/no-delete and no-insert/delete for same line/column
-    let last_fix_info: markdownlint.FixInfo = {
+    let last_fix_info: FixInfo = {
         lineNumber: -1,
     };
     for (const fixInfo of fix_infos) {
@@ -169,7 +171,7 @@ export function apply_fixes(
  */
 function apply_fix(
     line: string,
-    fix_info: markdownlint.RuleOnErrorFixInfo,
+    fix_info: RuleOnErrorFixInfo,
     line_ending: string,
 ): string | null {
     const { editColumn, deleteCount, insertText } =
@@ -200,8 +202,8 @@ function apply_fix(
 export function get_markdownlint_results(
     preformatted_text: string,
     tab_size: number,
-): markdownlint.LintResults {
-    const options: markdownlint.Options = {
+): LintResults {
+    const options: Options = {
         strings: {
             preformatted_text,
         },
@@ -211,18 +213,7 @@ export function get_markdownlint_results(
         resultVersion: 3,
     };
 
-    let lint_results: markdownlint.LintResults | undefined = undefined;
-
-    markdownlint(
-        options,
-        (error: Error | null, results?: markdownlint.LintResults) => {
-            if (results !== undefined) {
-                lint_results = results;
-            } else if (error !== null) {
-                throw error;
-            }
-        },
-    );
+    let lint_results: LintResults | undefined = lint(options);
 
     if (lint_results === undefined) {
         throw new Error("markdownlint returned undefined");
@@ -240,7 +231,7 @@ export function run_markdownlint_rules(
 ): string {
     try {
         // apply markdownlint formatting to the preformatted text
-        const lint_results: markdownlint.LintResults = get_markdownlint_results(
+        const lint_results: LintResults = get_markdownlint_results(
             text,
             options.tabSize,
         );

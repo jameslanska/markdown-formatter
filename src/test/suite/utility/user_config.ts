@@ -2,8 +2,8 @@
 /* eslint-disable indent */
 // read in the default config of package.json
 
-import fs = require("node:fs");
-import path = require("node:path");
+import * as fs from "node:fs";
+import * as path from "node:path";
 import * as vscode from "vscode";
 
 export const TEST_WORKSPACE_PATH = path.resolve(

@@ -117,7 +117,7 @@
 	},
 	"dependencies": {
 		"@jameslanska/markdown-table-formatter": "^0.3.0",
-		"markdownlint": "^0.36"
+		"markdownlint": "^0.37"
 	},
 	"devDependencies": {
 		"@types/mocha": "^10.0.0",

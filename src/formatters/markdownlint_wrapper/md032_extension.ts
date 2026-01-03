@@ -1,5 +1,3 @@
-"use strict";
-
 /** At the start of the string there are 1 or more numerals followed by a period and a space */
 const ordered_list_item_at_line_start = /^[\d]+[.] /;
 
