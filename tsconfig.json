@@ -1,20 +1,22 @@
 {
 	"compilerOptions": {
+		// Base Options
 		"module": "CommonJS",
-		"target": "es2022",
-		"outDir": "out",
+		"target": "es2024",
 		"lib": [
-			"es2022",
 			"DOM",
+			"es2024",
 		],
-		"paths": {
-			"*": [
-				"./typings/*"
-			]
-		},
-		"sourceMap": true,
+
+		// Output
+		"outDir": "out",
 		"rootDir": "src",
+		"sourceMap": true,
+
+		// Strictness
 		"strict": true,
+
+		// JavaScript Support
 		"allowJs": true,
 	},
 	"exclude": [
