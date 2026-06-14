@@ -88,6 +88,9 @@ const MARKDOWN_FORMATTER_DEFAULTS = {
     /** turn off rule limiting punctuation in heading.  It is common to have question marks in headers. */
     MD026: false,
 
+    /** turn off rule as it conflicts with the this repo's ordered list formatted and incorrectly handles HTML comments */
+    MD029: false,
+
     /** spacing after list item markers */
     MD030: {
         ol_single: 1,
