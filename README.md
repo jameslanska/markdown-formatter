@@ -1,4 +1,4 @@
-[![CI](https://github.com/jameslanska/markdown-formatter/actions/workflows/main.yml/badge.svg)](https://github.com/jameslanska/markdown-formatter/actions/workflows/main.yml) [![version](https://img.shields.io/vscode-marketplace/v/james-lanska.markdown-formatter?label=vscode%20marketplace)](https://marketplace.visualstudio.com/items?itemName=james-lanska.markdown-formatter) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![CI](https://github.com/jameslanska/markdown-formatter/actions/workflows/main.yml/badge.svg)](https://github.com/jameslanska/markdown-formatter/actions/workflows/main.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
 # Markdown Formatter
 
