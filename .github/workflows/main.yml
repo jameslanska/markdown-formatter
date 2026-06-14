@@ -23,8 +23,5 @@ jobs:
           npm install @vscode/test-electron
           npm install @vscode/test-cli
 
-      - name: "Compile"
-        run: npm run test-compile
-
       - name: "Test"
         run: npm run test

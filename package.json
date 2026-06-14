@@ -113,7 +113,8 @@
 		"compile": "tsc -p ./",
 		"test-compile": "npm run compile ; npm run copy-test-text",
 		"copy-test-text": "cp -R ./src/test/suite/integration/test_text_snippets ./out/test/suite/integration/test_text_snippets",
-		"test": "vscode-test"
+		"package": "npx @vscode/vsce package",
+		"test": "npm run test-compile; vscode-test"
 	},
 	"dependencies": {
 		"@jameslanska/markdown-table-formatter": "^0.3.0",
