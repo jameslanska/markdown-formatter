@@ -210,7 +210,6 @@ export function get_markdownlint_results(
         config: get_markdownlint_config(tab_size),
         configParsers: undefined,
         customRules: undefined,
-        resultVersion: 3,
     };
 
     let lint_results: LintResults | undefined = lint(options);

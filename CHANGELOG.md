@@ -6,9 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [0.3.0] - Unreleased
 
-- Add MD058 "Tables should be surrounded by blank lines" support
 - Update to ES2024
-- Update markdownlint to 0.38.0
+- Update markdownlint to 0.41.0
+
+  markdownlint 0.39 improved MD029 to treat an HTML comment between ordered list items as a list break
+
+  Add MD058 "Tables should be surrounded by blank lines" support
 
 ## [0.2.0] - 2023-11-02
 
