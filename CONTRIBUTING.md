@@ -87,10 +87,12 @@ Start reading the code and you'll get the hang of it.  We optimize for readabili
 
 ## Cutting a Release
 
-1. Update the changelog to include the current date
-2. Update the changelog to include user-relevant changes
-3. Update the changelog to include a single line of major version changes of the dev dependencies (if any)
-4. Run the following to tag the `main` branch with a semver tag (no preceding `v`) and trigger the release GitHub Actions workflow:
+1. Run `npm upgrade` to update `package-lock.json`
+2. Ensure the tests pass both locally and in CI
+3. Update the changelog to include the current date
+4. Update the changelog to include user-relevant changes
+5. Update the changelog to include a single line of major version changes of the dev dependencies (if any)
+6. Run the following to tag the `main` branch with a semver tag (no preceding `v`) and trigger the release GitHub Actions workflow:
 
    ```shell
    git tag <x.x.x>
