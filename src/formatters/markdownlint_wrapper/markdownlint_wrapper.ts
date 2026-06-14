@@ -212,7 +212,7 @@ export function get_markdownlint_results(
         customRules: undefined,
     };
 
-    let lint_results: LintResults | undefined = lint(options);
+    const lint_results: LintResults | undefined = lint(options);
 
     if (lint_results === undefined) {
         throw new Error("markdownlint returned undefined");

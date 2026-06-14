@@ -85,7 +85,6 @@ export function is_blank_line(line: string): boolean {
     const startComment = "<!--";
     const endComment = "-->";
     function removeComments(s: string): string {
-        // eslint-disable-next-line no-constant-condition
         while (true) {
             const start = s.indexOf(startComment);
             const end = s.indexOf(endComment);
