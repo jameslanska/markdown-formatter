@@ -9,6 +9,12 @@
 			"es2024",
 		],
 
+		// TypeScript 6 no longer auto-includes all @types/* packages globally, so list the ones providing ambient globals explicitly.
+		"types": [
+			"node",
+			"mocha",
+		],
+
 		// Output
 		"outDir": "out",
 		"rootDir": "src",
