@@ -84,3 +84,15 @@ Start reading the code and you'll get the hang of it.  We optimize for readabili
 - every change must have corresponding tests
 - every function must be documented with [TSDoc](https://tsdoc.org/)
 - version numbers follow [Semantic Versioning](https://semver.org/)
+
+## Cutting a Release
+
+1. Update the changelog to include the current date
+2. Update the changelog to include user-relevant changes
+3. Update the changelog to include a single line of major version changes of the dev dependencies (if any)
+4. Run the following to tag the `main` branch with a semver tag (no preceding `v`) and trigger the release GitHub Actions workflow:
+
+   ```shell
+   git tag <x.x.x>
+   git push origin tag <x.x.x>
+   ```
