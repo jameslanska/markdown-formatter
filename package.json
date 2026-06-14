@@ -117,7 +117,7 @@
 	},
 	"dependencies": {
 		"@jameslanska/markdown-table-formatter": "^0.3.0",
-		"markdownlint": "^0.39"
+		"markdownlint": "^0.41"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
